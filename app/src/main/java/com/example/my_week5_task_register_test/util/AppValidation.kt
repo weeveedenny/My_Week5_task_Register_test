@@ -7,7 +7,7 @@ import java.util.regex.Pattern
 object AppValidation {
 
     fun validateName(name: String): Boolean {
-        if (name.isEmpty()) {
+        if (name.isBlank()) {
             return false
         }
         return true
@@ -20,31 +20,31 @@ object AppValidation {
         if (email.isEmpty()){
             return false
         }
+        val EMAIL_REGEX = "^[A-Za-z](.*)([@]{1})(.{1,})(\\.)(.{1,})";
 
-        val pattern: Pattern = Patterns.EMAIL_ADDRESS
-        pattern.matcher(email).matches()
-        return true
+            return EMAIL_REGEX.toRegex().matches(email);
+
     }
 
 
 
     fun validatePhoneNumber(phoneNumber: String): Boolean {
 
-        if (phoneNumber.startsWith("070", true) && (phoneNumber.length == 13)) {
+        if (phoneNumber.startsWith("070", true) && (phoneNumber.length == 11)) {
             return true
         }
-        else if (phoneNumber.startsWith("080", true) && (phoneNumber.length == 13)) {
+        else if (phoneNumber.startsWith("080", true) && (phoneNumber.length == 11)) {
             return true
         }
-        else if (phoneNumber.startsWith("090", true) && (phoneNumber.length == 13)) {
+        else if (phoneNumber.startsWith("090", true) && (phoneNumber.length == 11)) {
             return true
         }
-        else if (phoneNumber.startsWith("081", true) && (phoneNumber.length == 13)) {
+        else if (phoneNumber.startsWith("081", true) && (phoneNumber.length == 11)) {
             return true
         }
-        else if (phoneNumber.startsWith("+234", true) && (phoneNumber.length == 13)) {
+        else if (phoneNumber.startsWith("+234", true) && (phoneNumber.length == 11)) {
             return true
-        } else if (phoneNumber.startsWith("234", true) && (phoneNumber.length == 13)) {
+        } else if (phoneNumber.startsWith("234", true) && (phoneNumber.length == 11)) {
             return true
         }
         return false

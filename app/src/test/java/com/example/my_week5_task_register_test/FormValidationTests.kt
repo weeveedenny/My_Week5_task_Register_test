@@ -9,14 +9,14 @@ import org.junit.Test
 class FormValidationTests {
 
     @Test
-    fun name_not_empty(){
+    fun name_not_Blank(){
         var name = "Dennis"
         var result = AppValidation.validateName(name)
         assertTrue(result)
     }
 
     @Test
-    fun name_is_empty(){
+    fun name_is_Blank(){
         var name = ""
         assertFalse(AppValidation.validateName(name))
     }
@@ -24,14 +24,14 @@ class FormValidationTests {
 
     @Test
     fun is_valid_email_address(){
-        var emailAddress = ""
+        var emailAddress = "weevee@gmail.com"
         assertTrue(AppValidation.validateEmail(emailAddress))
     }
 
 
     @Test
     fun phonenumber_is_valid() {
-        val phoneNumber = "08123672345"
+        val phoneNumber = "07033443327"
         assertTrue(AppValidation.validatePhoneNumber(phoneNumber))
     }
 
