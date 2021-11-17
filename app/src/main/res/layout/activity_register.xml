@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register"
+    android:id="@+id/Register_activity">
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationView"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/card" />
+
+    <EditText
+        android:id="@+id/reg_name"
+        android:layout_width="371dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:paddingLeft="20dp"
+        android:hint="@string/name"
+        android:background="@drawable/item_background"
+        app:layout_constraintEnd_toEndOf="@+id/animationView"
+        app:layout_constraintStart_toStartOf="@+id/animationView"
+        app:layout_constraintTop_toBottomOf="@+id/animationView" />
+
+    <EditText
+        android:id="@+id/reg_email"
+        android:layout_width="371dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:paddingLeft="20dp"
+        android:ems="10"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+android:background="@drawable/item_background"
+        app:layout_constraintEnd_toEndOf="@+id/reg_name"
+        app:layout_constraintStart_toStartOf="@+id/reg_name"
+        app:layout_constraintTop_toBottomOf="@id/reg_name" />
+
+    <EditText
+        android:id="@+id/reg_phone"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:paddingLeft="20dp"
+        android:ems="10"
+        android:background="@drawable/item_background"
+        android:hint="@string/phone"
+        android:inputType="phone"
+        app:layout_constraintStart_toStartOf="@+id/reg_email"
+        app:layout_constraintTop_toBottomOf="@id/reg_email" />
+
+
+    <Spinner
+        android:id="@+id/My_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/item_background"
+        app:layout_constraintBottom_toBottomOf="@+id/reg_phone"
+        app:layout_constraintEnd_toEndOf="@+id/reg_email"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/reg_phone"
+        app:layout_constraintTop_toBottomOf="@+id/reg_email"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/reg_button"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="sans-serif"
+        android:textSize="20sp"
+        android:text="@string/register"
+        app:backgroundTint="@color/red"
+        android:background="@drawable/item_background"
+        app:layout_constraintEnd_toEndOf="@+id/My_spinner"
+        app:layout_constraintStart_toStartOf="@+id/reg_phone"
+        app:layout_constraintTop_toBottomOf="@+id/reg_phone" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

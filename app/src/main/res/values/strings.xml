@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">My_Week5_task_Register_test</string>
+    <string name="selected_item">Selected item:</string>
+    <string-array name="Sex">
+        <item>Select Gender</item>
+        <item>Male </item>
+        <item>Female </item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="phone">Phone</string>
+    <string name="register">Register</string>
+</resources>
+
