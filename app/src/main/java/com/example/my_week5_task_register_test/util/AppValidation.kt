@@ -1,7 +1,5 @@
 package com.example.my_week5_task_register_test.util
 
-import android.util.Patterns
-import java.util.regex.Pattern
 
 
 object AppValidation {
@@ -20,10 +18,9 @@ object AppValidation {
         if (email.isEmpty()){
             return false
         }
-        val EMAIL_REGEX = "^[A-Za-z](.*)([@]{1})(.{1,})(\\.)(.{1,})";
+        val EMAIL_REGEX = "^[A-Za-z](.*)([@]{1})(.{1,})(\\.)(.{1,})"
 
             return EMAIL_REGEX.toRegex().matches(email);
-
     }
 
 
@@ -42,7 +39,7 @@ object AppValidation {
         else if (phoneNumber.startsWith("081", true) && (phoneNumber.length == 11)) {
             return true
         }
-        else if (phoneNumber.startsWith("+234", true) && (phoneNumber.length == 11)) {
+        else if (phoneNumber.startsWith("+234", true) && (phoneNumber.length > 11)) {
             return true
         } else if (phoneNumber.startsWith("234", true) && (phoneNumber.length == 11)) {
             return true
