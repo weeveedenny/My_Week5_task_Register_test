@@ -46,4 +46,8 @@ object AppValidation {
         }
         return false
     }
+
+    fun validateInputs(name: String, email: String, phoneNumber: String): Boolean {
+        return  validateEmail(email) && validateName(name) && validatePhoneNumber(phoneNumber)
+    }
 }

@@ -1,5 +1,7 @@
 package com.example.my_week5_task_register_test
 import androidx.test.espresso.Espresso.onView
+import androidx.test.espresso.action.ViewActions.click
+import androidx.test.espresso.action.ViewActions.replaceText
 import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.matcher.ViewMatchers.*
 import androidx.test.ext.junit.rules.ActivityScenarioRule
@@ -58,6 +60,15 @@ class UI {
     fun Check_register_button_visibility(){
 
         onView(withId(R.id.reg_button)).check(matches(isDisplayed()))
+    }
+
+    @Test
+    fun second_activity_is_displayed_when_button_is_clicked(){
+        onView(withId(R.id.reg_name)).perform(replaceText("Dennis"))
+        onView(withId(R.id.reg_email)).perform(replaceText("dennisbaddest@gmail.com"))
+        onView(withId(R.id.reg_phone)).perform(replaceText("08112345678"))
+        onView(withId(R.id.reg_button)).perform(click())
+        onView(withId(R.id.welcome_activity_root_layout)).check(matches(isDisplayed()))
     }
 
 
