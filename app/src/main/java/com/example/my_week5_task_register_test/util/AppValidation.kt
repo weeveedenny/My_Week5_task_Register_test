@@ -15,7 +15,7 @@ object AppValidation {
 
     fun validateEmail(email: String): Boolean {
 
-        if (email.isEmpty()){
+        if (email.isBlank()){
             return false
         }
         val EMAIL_REGEX = "^[A-Za-z](.*)([@]{1})(.{1,})(\\.)(.{1,})"

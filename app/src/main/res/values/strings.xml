@@ -12,5 +12,10 @@
     <string name="email">Email</string>
     <string name="phone">Phone</string>
     <string name="register">Register</string>
+    <string name="donate">Donate</string>
+    <string name="a_penny_and_save">a penny and save</string>
+    <string name="a_life">a life</string>
+    <string name="today">Today.</string>
+    <string name="fund">Fund</string>
 </resources>
 

@@ -57,6 +57,7 @@ class Register : AppCompatActivity() {
             val emailstr: String = emailtext.getText().toString()
             val phonestr: String = phonetext.getText().toString()
             val sexstr: String = spinner.getItemAtPosition(spinnerItemSelectedPosition).toString()
+
             if (AppValidation.validateInputs(namestr, emailstr, phonestr)) {
                 val intent = Intent(applicationContext, Welcome::class.java)
                 intent.putExtra("name", namestr)
@@ -65,8 +66,14 @@ class Register : AppCompatActivity() {
                 intent.putExtra("sex", sexstr)
                 startActivity(intent)
             }
-            else {
-                Snackbar.make(findViewById(R.id.reg_name), "Please input the right credentials", Snackbar.LENGTH_LONG).show()
+            else if(!AppValidation.validateName(namestr)){
+                Snackbar.make(findViewById(R.id.reg_name), "Please Input a valid name ", Snackbar.LENGTH_LONG).show()
+            }
+            else if(!AppValidation.validateEmail(emailstr)){
+                Snackbar.make(findViewById(R.id.reg_email), "Please Input a valid email ", Snackbar.LENGTH_LONG).show()
+            }
+            else if(!AppValidation.validatePhoneNumber(phonestr)){
+                Snackbar.make(findViewById(R.id.reg_phone), "Please Input a valid Nigerian Phone number ", Snackbar.LENGTH_LONG).show()
             }
 
         }
