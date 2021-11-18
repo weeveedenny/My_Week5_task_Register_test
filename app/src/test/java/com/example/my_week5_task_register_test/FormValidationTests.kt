@@ -29,5 +29,11 @@ class FormValidationTests {
         assertTrue(AppValidation.validatePhoneNumber(phoneNumber))
     }
 
+//    @Test
+//    fun sex_is_valid() {
+//        val sex = "Male"
+//        assertTrue(AppValidation.validateSex(sex))
+//    }
+
 
 }
