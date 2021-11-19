@@ -59,7 +59,7 @@ class UI {
     @Test
     fun Check_register_button_visibility(){
 
-        onView(withId(R.id.reg_button)).check(matches(isDisplayed()))
+        onView(withId(R.id.`reg_button.`)).check(matches(isDisplayed()))
     }
 
     @Test
@@ -67,7 +67,7 @@ class UI {
         onView(withId(R.id.reg_name)).perform(replaceText("Dennis"))
         onView(withId(R.id.reg_email)).perform(replaceText("dennisbaddest@gmail.com"))
         onView(withId(R.id.reg_phone)).perform(replaceText("08112345678"))
-        onView(withId(R.id.reg_button)).perform(click())
+        onView(withId(R.id.`reg_button.`)).perform(click())
         onView(withId(R.id.welcome_activity_root_layout)).check(matches(isDisplayed()))
     }
 

@@ -43,7 +43,7 @@ class Register : AppCompatActivity() {
             }
 
         }
-        regbutton = findViewById(R.id.reg_button)
+        regbutton = findViewById(R.id.`reg_button.`)
         nametext = findViewById(R.id.reg_name)
         emailtext = findViewById(R.id.reg_email)
         phonetext = findViewById(R.id.reg_phone)
